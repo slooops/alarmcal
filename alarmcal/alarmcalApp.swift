@@ -1,17 +1,15 @@
-//
-//  alarmcalApp.swift
-//  alarmcal
-//
-//  Created by jasloop on 6/13/26.
-//
-
+import SwiftData
 import SwiftUI
 
 @main
 struct alarmcalApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MonthView()
+                .task {
+                    await AlarmKitManager.shared.requestAuthorization()
+                }
         }
+        .modelContainer(for: CalendarEvent.self)
     }
 }
