@@ -29,9 +29,22 @@
 		FB0FAED82FDE3F1D0050A079 /* alarmcalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = alarmcalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FB0FAEF02FDE3F1D0050A079 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FB0FAEC02FDE3F1B0050A079 /* alarmcal */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		FB0FAEC32FDE3F1B0050A079 /* alarmcal */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FB0FAEF02FDE3F1D0050A079 /* PBXFileSystemSynchronizedBuildFileExceptionSet */,
+			);
 			path = alarmcal;
 			sourceTree = "<group>";
 		};

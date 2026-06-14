@@ -2,6 +2,7 @@ import Foundation
 
 enum LeadTime: Double, CaseIterable, Identifiable {
     case atTime = 0
+    case oneMin = 60
     case fiveMin = 300
     case fifteenMin = 900
     case thirtyMin = 1800
@@ -13,6 +14,7 @@ enum LeadTime: Double, CaseIterable, Identifiable {
     var label: String {
         switch self {
         case .atTime: "At time of event"
+        case .oneMin: "1 minute before"
         case .fiveMin: "5 minutes before"
         case .fifteenMin: "15 minutes before"
         case .thirtyMin: "30 minutes before"

@@ -122,14 +122,14 @@ struct MonthView: View {
                     .frame(width: 32, height: 32)
                     .background {
                         if isSelected {
-                            Circle().fill(.accent)
+                            Circle().fill(Color.accentColor)
                         } else if isToday {
-                            Circle().strokeBorder(.accent, lineWidth: 1.5)
+                            Circle().strokeBorder(Color.accentColor, lineWidth: 1.5)
                         }
                     }
 
                 Circle()
-                    .fill(isSelected ? .accent : .secondary)
+                    .fill(isSelected ? Color.accentColor : Color.secondary)
                     .frame(width: 4, height: 4)
                     .opacity(hasEvents ? 1 : 0)
             }
@@ -200,7 +200,7 @@ struct EventRow: View {
     var body: some View {
         HStack(spacing: 12) {
             RoundedRectangle(cornerRadius: 2)
-                .fill(event.alarmEnabled ? .orange : .accent)
+                .fill(event.alarmEnabled ? Color.orange : Color.accentColor)
                 .frame(width: 4)
 
             VStack(alignment: .leading, spacing: 2) {

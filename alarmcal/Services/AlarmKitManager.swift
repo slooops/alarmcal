@@ -11,7 +11,7 @@ final class AlarmKitManager {
 
     var isAuthorized = false
 
-    private static let snoozeDuration: Duration = .seconds(9 * 60)
+    private static let snoozeDuration: TimeInterval = 9 * 60
 
     func requestAuthorization() async {
         do {
@@ -25,19 +25,13 @@ final class AlarmKitManager {
     func scheduleAlarm(for event: CalendarEvent) async throws {
         let fireDate = event.startDate.addingTimeInterval(-event.alarmLeadTime)
 
-        let stopButton = AlarmButton(
-            text: "Stop",
-            textColor: .white,
-            systemImageName: "checkmark.circle.fill"
-        )
         let snoozeButton = AlarmButton(
             text: "Snooze",
             textColor: .white,
             systemImageName: "zzz"
         )
-        let alert = AlarmAlert(
+        let alert = AlarmPresentation.Alert(
             title: LocalizedStringResource(stringLiteral: event.title),
-            stopButton: stopButton,
             secondaryButton: snoozeButton,
             secondaryButtonBehavior: .countdown
         )
