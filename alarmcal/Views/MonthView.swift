@@ -14,35 +14,32 @@ struct MonthView: View {
     private let columns = Array(repeating: GridItem(.flexible()), count: 7)
 
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 0) {
-                monthHeader
-                weekdayHeader
-                monthGrid
-                Divider()
-                dayEventsList
-            }
-            .navigationTitle("Calendar")
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button("Today") {
-                        withAnimation {
-                            displayedMonth = Date()
-                            selectedDate = Date()
-                        }
-                    }
-                }
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showingEditor = true
-                    } label: {
-                        Image(systemName: "plus")
+        VStack(spacing: 0) {
+            monthHeader
+            weekdayHeader
+            monthGrid
+            Divider()
+            dayEventsList
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button("Today") {
+                    withAnimation {
+                        displayedMonth = Date()
+                        selectedDate = Date()
                     }
                 }
             }
-            .sheet(isPresented: $showingEditor) {
-                EventEditorView(initialDate: selectedDate)
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    showingEditor = true
+                } label: {
+                    Image(systemName: "plus")
+                }
             }
+        }
+        .sheet(isPresented: $showingEditor) {
+            EventEditorView(initialDate: selectedDate)
         }
     }
 
