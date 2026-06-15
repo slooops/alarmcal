@@ -5,7 +5,7 @@ import SwiftUI
 struct alarmcalApp: App {
     var body: some Scene {
         WindowGroup {
-            MonthView()
+            CalendarRootView()
                 .task {
                     await AlarmKitManager.shared.requestAuthorization()
                 }
