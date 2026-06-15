@@ -30,7 +30,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		FB0FAEF02FDE3F1D0050A079 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+		FB0FAEF02FDE3F1D0050A079 /* Exceptions for "alarmcal" folder in "alarmcal" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -43,7 +43,7 @@
 		FB0FAEC32FDE3F1B0050A079 /* alarmcal */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				FB0FAEF02FDE3F1D0050A079 /* PBXFileSystemSynchronizedBuildFileExceptionSet */,
+				FB0FAEF02FDE3F1D0050A079 /* Exceptions for "alarmcal" folder in "alarmcal" target */,
 			);
 			path = alarmcal;
 			sourceTree = "<group>";
